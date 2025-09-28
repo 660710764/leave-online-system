@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f0f0f0;
+}
+
+.main-content {
+    min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 20px 40px;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #112C70 0%, #5B58EB 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 30px;
+    position: relative;
+}
+
+.profile-avatar {
+    margin-bottom: 20px;
+}
+
+.profile-avatar i {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-header h1 {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+.profile-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.profile-content {
+    padding: 30px;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.profile-item:last-child {
+    border-bottom: none;
+}
+
+.profile-item:hover {
+    background: #f8f9fa;
+    margin: 0 -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 8px;
+}
+
+.profile-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    flex: 1;
+}
+
+.profile-label i {
+    color: #5B58EB;
+    margin-right: 12px;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+.profile-value {
+    color: #666;
+    font-size: 16px;
+    text-align: right;
+    flex: 1;
+    max-width: 350px;
+    word-break: break-word;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.action-button {
+    background: linear-gradient(135deg, #112C70 0%, #5B58EB 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(17, 44, 112, 0.15);
+    position: relative;
+    overflow: hidden;
+    min-width: 160px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.action-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.08), 
+        transparent);
+    transition: left 0.5s;
+}
+
+.action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(17, 44, 112, 0.2);
+    background: linear-gradient(135deg, #5B58EB 0%, #BB63FF 100%);
+}
+
+.action-button:hover::before {
+    left: 100%;
+}
+
+.action-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(17, 44, 112, 0.15);
+}
+
+.action-button.primary {
+    background: linear-gradient(135deg, #0A2353 0%, #112C70 100%);
+    box-shadow: 0 2px 6px rgba(10, 35, 83, 0.15);
+}
+
+.action-button.primary:hover {
+    background: linear-gradient(135deg, #112C70 0%, #5B58EB 100%);
+    box-shadow: 0 3px 10px rgba(10, 35, 83, 0.2);
+}
+
+.action-button.secondary {
+    background: linear-gradient(135deg, #5B58EB 0%, #112C70 100%);
+    box-shadow: 0 2px 6px rgba(91, 88, 235, 0.15);
+}
+
+.action-button.secondary:hover {
+    background: linear-gradient(135deg, #112C70 0%, #BB63FF 100%);
+    box-shadow: 0 3px 10px rgba(91, 88, 235, 0.2);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 70px 10px 20px;
+    }
+    
+    .profile-container {
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+    
+    .profile-header {
+        padding: 30px 20px;
+    }
+    
+    .profile-header h1 {
+        font-size: 24px;
+    }
+    
+    .profile-header h2 {
+        font-size: 20px;
+    }
+    
+    .profile-avatar i {
+        font-size: 60px;
+        padding: 15px;
+    }
+    
+    .profile-content {
+        padding: 20px;
+    }
+    
+    .profile-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px 0;
+    }
+    
+    .profile-value {
+        text-align: left;
+        max-width: 100%;
+        padding-left: 32px;
+    }
+    
+    .profile-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .action-button {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        padding: 25px 15px;
+    }
+    
+    .profile-content {
+        padding: 15px;
+    }
+    
+    .profile-item:hover {
+        margin: 0 -10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .profile-label {
+        font-size: 15px;
+    }
+    
+    .profile-value {
+        font-size: 15px;
+    }
+    
+    .action-button {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+}

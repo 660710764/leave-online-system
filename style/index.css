@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.welcome-text {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #151515;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+
+/* ปุ่ม */
+.action-buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.action-button-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.action-button {
+    background: linear-gradient(135deg, #112C70 0%, #5B58EB 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(17, 44, 112, 0.15);
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+    text-align: center;
+}
+
+.action-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.08), 
+        transparent);
+    transition: left 0.5s;
+}
+
+.action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(17, 44, 112, 0.2);
+    background: linear-gradient(135deg, #5B58EB 0%, #BB63FF 100%);
+}
+
+.action-button:hover::before {
+    left: 100%;
+}
+
+.action-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(17, 44, 112, 0.15);
+}
+
+.action-button.primary {
+    background: linear-gradient(135deg, #4643eb 0%, #112C70 100%);
+    box-shadow: 0 2px 6px rgba(91, 88, 235, 0.15);
+}
+
+.action-button.primary:hover {
+    background: linear-gradient(135deg, #112C70 0%, #112C70 100%);
+    box-shadow: 0 3px 10px rgba(91, 88, 235, 0.2);
+}
+
+.action-button.secondary {
+    background: linear-gradient(135deg, #4643eb 0%, #112C70 100%);
+    box-shadow: 0 2px 6px rgba(91, 88, 235, 0.15);
+}
+
+.action-button.secondary:hover {
+    background: linear-gradient(135deg, #112C70 0%, #112C70 100%);
+    box-shadow: 0 3px 10px rgba(91, 88, 235, 0.2);
+}
+
+.action-button i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .action-buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .action-button {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 24px;
+        font-size: 15px;
+        min-width: auto;
+    }
+    
+    .action-button i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .action-buttons-container {
+        gap: 12px;
+        margin: 15px 0;
+    }
+    
+    .action-button {
+        max-width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .action-button i {
+        font-size: 14px;
+        margin-right: 6px;
+    }
+}

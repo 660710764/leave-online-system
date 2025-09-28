@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เข้าสู่ระบบ</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
     <div class="login-container">
@@ -19,7 +19,7 @@
             <div class="error-message"><?php echo $_SESSION['message']; unset($_SESSION['message']); ?></div>
         <?php endif; ?>
         
-        <form action="process-login.php" method="POST">
+        <form action="process/process-login.php" method="POST">
             <div class="form-group">
                 <label for="username">ชื่อผู้ใช้งาน</label>
                 <input type="text" id="username" name="username" required>
