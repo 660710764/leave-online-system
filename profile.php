@@ -75,7 +75,7 @@
                     <div class="profile-item">
                         <div class="profile-label">
                             <i class="fas fa-id-badge"></i>
-                            <span>รหัสพนักงาน</span>
+                            <span>รหัสบุคลากร</span>
                         </div>
                         <div class="profile-value">
                             <?php echo ($_SESSION['id']); ?>
