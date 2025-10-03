@@ -1,7 +1,7 @@
 <?php 
     session_start();
     
-    if (empty($_SESSION['logincheck']) || $_SESSION['role'] != "Employee") {
+    if (empty($_SESSION['logincheck']) || $_SESSION['role'] != "บุคลากร") {
         header('Location: login.php');
         exit();
     }

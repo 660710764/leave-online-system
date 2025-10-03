@@ -3,7 +3,7 @@
     include('db.php');
     include('process/process-index.php');
 
-    if (empty($_SESSION['logincheck']) || $_SESSION['role'] != "Employee") {
+    if (empty($_SESSION['logincheck']) || $_SESSION['role'] != "บุคลากร") {
         header('Location: login.php');
         exit();
     }
@@ -70,7 +70,6 @@
     </div>
     <div class="dashboard-container">
 
-    <!-- วันลาคงเหลือ -->
     <div class="leave-balance-container">
         <h2 class="leave-balance-title">วันลาคงเหลือ</h2>
         <div class="leave-balance-grid">
@@ -86,7 +85,6 @@
         </div>
     </div>
     
-    <!-- สรุปสถานะการลา -->
     <div class="leave-summary-section">
         <h2 class="leave-summary-title">สรุปสถานะการลา</h2>
         <div class="leave-summary-container">
