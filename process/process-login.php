@@ -29,10 +29,10 @@
                 $_SESSION['department'] = $user['department_name'];
 ;
 
-                if($_SESSION['role'] == 'Employee'){
+                if($_SESSION['role'] == 'บุคลากร'){
                     header('location: ../index.php');
                     exit();
-                } else if ($_SESSION['role'] == "Human Resources"){
+                } else if ($_SESSION['role'] == "หัวหน้าบุคลากร"){
                     header('location: ../dashboard.php');
                     exit();
                 }
