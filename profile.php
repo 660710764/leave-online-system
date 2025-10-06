@@ -105,7 +105,7 @@
                     <div class="profile-item">
                         <div class="profile-label">
                             <i class="fas fa-building"></i>
-                            <span>แผนก</span>
+                            <span>หมวด</span>
                         </div>
                         <div class="profile-value">
                             <?php echo ($_SESSION['department']); ?>
@@ -115,7 +115,7 @@
                     <div class="profile-item">
                         <div class="profile-label">
                             <i class="fas fa-user-tag"></i>
-                            <span>ตำแหน่ง</span>
+                            <span>ต่ำแหน่ง</span>
                         </div>
                         <div class="profile-value">
                             <?php echo ($_SESSION['role']); ?>
