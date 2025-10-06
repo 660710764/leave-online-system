@@ -32,7 +32,7 @@
                 if($_SESSION['role'] == 'บุคลากร'){
                     header('location: ../index.php');
                     exit();
-                } else if ($_SESSION['role'] == "หัวหน้าบุคลากร"){
+                } else if ($_SESSION['role'] == "หัวหน้าหมวด"){
                     header('location: ../dashboard.php');
                     exit();
                 }
