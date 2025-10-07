@@ -46,7 +46,4 @@
 
     $stmt->close();
     $connect->close();
-
-    $GLOBALS['history_data'] = $history;
-    $GLOBALS['leave_usage_data'] = $leave_usage;
 ?>

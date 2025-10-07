@@ -1,8 +1,5 @@
 <?php
     include("process/process-history.php");
-
-    $history = $GLOBALS['history_data'];
-    $leave_usage = $GLOBALS['leave_usage_data'];
 ?>
 
 <!DOCTYPE html>

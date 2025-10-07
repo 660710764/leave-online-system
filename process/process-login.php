@@ -27,7 +27,6 @@
                 $_SESSION['addres'] = $user['addres'];
                 $_SESSION['role'] = $user['role'];
                 $_SESSION['department'] = $user['department_name'];
-;
 
                 if($_SESSION['role'] == 'บุคลากร'){
                     header('location: ../index.php');

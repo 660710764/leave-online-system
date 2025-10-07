@@ -115,7 +115,7 @@
                     <div class="profile-item">
                         <div class="profile-label">
                             <i class="fas fa-user-tag"></i>
-                            <span>ต่ำแหน่ง</span>
+                            <span>ตำแหน่ง</span>
                         </div>
                         <div class="profile-value">
                             <?php echo ($_SESSION['role']); ?>
