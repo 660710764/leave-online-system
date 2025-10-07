@@ -1,7 +1,7 @@
 <?php
     include('./db.php');
 
-    $employee_id = 1;
+    $employee_id = 202501;
 
     $sql = "SELECT lr.leave_id, lt.type_name, lr.start_date, lr.end_date, 
                 DATEDIFF(lr.end_date, lr.start_date) + 1 AS total_days,
